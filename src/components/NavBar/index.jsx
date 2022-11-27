@@ -1,4 +1,7 @@
-export default function NavBar() {
+import './navBar.styles.css'
+import React from 'react'
+
+const index = () => {
   return (
     <div>
       <ul className="nav-bar">
@@ -18,3 +21,5 @@ export default function NavBar() {
     </div>
   );
 }
+
+export default index

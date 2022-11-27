@@ -9,39 +9,3 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-
-.header {
-  border: solid 1px #ff00003d;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 70px;
-}
-
-.nav-bar {
-  display: flex;
-  gap: 2em;
-  list-style: none;
-}
-
-.nav-bar li a {
-  text-decoration: none;
-}
-
-@media (max-width: 668px) {
-  .header {
-    position: relative;
-  }
-
-  .nav-bar {
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    background: #fff;
-    min-width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}

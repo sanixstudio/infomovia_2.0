@@ -16,8 +16,8 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <div className="App">
         <Header/>
-        <PlayingNow />
         <Hero />
+        <PlayingNow />
         <UpComing/>
         <TopRated />
         <Footer />

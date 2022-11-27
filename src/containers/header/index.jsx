@@ -1,4 +1,5 @@
 import {Logo, NavBar} from "../../components";
+import './header.styles.css'
 
 const Header = () => {
   return (
