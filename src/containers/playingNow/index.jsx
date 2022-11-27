@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { REACT_APP_BASE_URL } from "../../constanst";
-import { fetchMoviesList } from "../../hooks/useFetchMovies";
+import { REACT_APP_BASE_URL } from "../../constants";
+import { fetchMoviesList } from "../../hooks";
 
 const PlayingNow = () => {
   const API_KEY = "1dc3a1bc9c9d1a12ed9931344d82ebc1";
