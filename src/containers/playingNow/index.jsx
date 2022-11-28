@@ -2,6 +2,9 @@ import { useQuery } from "@tanstack/react-query";
 import { PLAYING_NOW } from "../../utils/constants";
 import { fetchMoviesList } from "../../hooks";
 import { ThreeDots } from "react-loader-spinner";
+import Poster from "../../components/Poster";
+
+import './playingNow.styles.css'
 
 const PlayingNow = () => {
   const { status, data } = useQuery(["moviesList"], () =>
@@ -22,12 +25,15 @@ const PlayingNow = () => {
     );
 
   return (
-    <div>
-      {
-        data.map((movie, i) => (
-          <div key={i}>{movie.title}</div>
-        ))}
-    </div>
+    <>
+      <h2>Playing Now</h2>
+      <div className="movies-container">
+        {
+          data.map(movieInfo => (
+            <Poster key={movieInfo.id} movieInfo={movieInfo} />
+          ))}
+      </div>
+    </>
   );
 };
 
