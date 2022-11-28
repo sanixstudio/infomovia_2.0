@@ -1,11 +1,29 @@
+:root {
+  --linkColor: #0BC9C1;
+  --textColor: #FFFFEB;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+body {
+  background-color: #111111;
+}
+
 .App {
   font-family: sans-serif;
   max-width: 1200px;
   margin: 0 auto;
+  color: var(--textColor);
+}
+
+a {
+  color: var(--textColor);
+}
+
+a:hover {
+  color: var(--linkColor);
 }

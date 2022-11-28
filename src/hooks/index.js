@@ -3,6 +3,6 @@ export const fetchMoviesList = async (endPoint) => {
     const res = await (await fetch(endPoint)).json();
     return res.results;
   } catch (err) {
-    console.log(err);
+    console.log(err.message);
   }
 };
