@@ -1,5 +1,5 @@
 :root {
-  --linkColor: #0BC9C1;
+  --primary: #0BC9C1;
   --textColor: #FFFFEB;
 }
 
@@ -27,11 +27,11 @@ a {
 }
 
 a:hover {
-  color: var(--linkColor);
+  color: var(--primary);
 }
 
 .section-wrapper {
-  background: linear-gradient(rgba(11, 201, 193, .1), transparent);
+  background: linear-gradient(rgba(100, 100, 100, .2), transparent);
   border-radius: 10px;
   padding-inline: 1em;
   margin-top: 6em;
@@ -46,7 +46,8 @@ a:hover {
 
 .section-title {
   margin-block: 1em;
-  padding-bottom: .5em;
+  padding-bottom: .4em;
   padding-top: .5em;
-  border-bottom: 1px solid #fff;
+  color: var(--primary);
+  border-bottom: 1px solid var(--primary);
 }
