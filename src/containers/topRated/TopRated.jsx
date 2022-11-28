@@ -24,7 +24,7 @@ const TopRated = () => {
 
   return (
     <>
-      <h2 className="section-title" id="top-rated">Top Rated</h2>
+      <h1 className="section-title" id="top-rated">Top Rated</h1>
       <div className="movies-container">
         {
           data.map(movieInfo => (

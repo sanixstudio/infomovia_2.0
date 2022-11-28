@@ -26,7 +26,7 @@ const UpComing = () => {
 
   return (
     <>
-      <h2 className="section-title" id="up-coming">Upcoming</h2>
+      <h1 className="section-title" id="up-coming">Upcoming</h1>
       <div className="movies-container">
         {
           data.map(movieInfo => (
