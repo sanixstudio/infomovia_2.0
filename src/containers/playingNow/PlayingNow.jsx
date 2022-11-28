@@ -2,16 +2,14 @@ import { useQuery } from "@tanstack/react-query";
 import { PLAYING_NOW } from "../../utils/constants";
 import { fetchMoviesList } from "../../hooks";
 import { ThreeDots } from "react-loader-spinner";
-import Poster from "../../components/Poster";
+import Poster from "../../components/Poster/Poster";
 
-import './playingNow.styles.css'
+import '../../App.css'
 
 const PlayingNow = () => {
-  const { status, data } = useQuery(["moviesList"], () =>
+  const { status, data } = useQuery(["playingNowMovies"], () =>
     fetchMoviesList(PLAYING_NOW)
   );
-
-  console.log(data);
 
   if (status === "loading")
     return (
@@ -26,7 +24,7 @@ const PlayingNow = () => {
 
   return (
     <>
-      <h2>Playing Now</h2>
+      <h2 className="section-title" id="playing-now">Playing Now</h2>
       <div className="movies-container">
         {
           data.map(movieInfo => (

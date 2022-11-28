@@ -11,6 +11,7 @@
 
 body {
   background-color: #111111;
+  scroll-behavior: smooth;
 }
 
 .App {
@@ -26,4 +27,16 @@ a {
 
 a:hover {
   color: var(--linkColor);
+}
+
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.section-title {
+  margin-block: 1em;
+  margin-top: 4em;
 }

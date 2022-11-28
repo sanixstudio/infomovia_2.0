@@ -6,16 +6,16 @@ const index = () => {
     <div>
       <ul className="nav-bar">
         <li>
-          <a href="#1">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="#1">Playing Now</a>
+          <a href="#playing-now">Playing Now</a>
         </li>
         <li>
-          <a href="#1">Upcoming</a>
+          <a href="#up-coming">Upcoming</a>
         </li>
         <li>
-          <a href="#1">Top Rated</a>
+          <a href="#top-rated">Top Rated</a>
         </li>
       </ul>
     </div>
