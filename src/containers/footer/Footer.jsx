@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
-      <h1>Footer</h1>
+    <div style={{textAlign: 'center', marginBlock: '2em'}}>
+      <small>&copy;sanixstudio 2022</small>
     </div>
   )
 }

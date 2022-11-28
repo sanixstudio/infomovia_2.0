@@ -7,23 +7,23 @@ const Hero = () => {
     <div style={{ minHeight: '50vh' }}>
       <Carousel>
         <div>
-          <img src="https://picsum.photos/id/237/700/300" alt="" />
+          <img src="https://picsum.photos/id/237/600/300" alt="" />
           <p></p>
         </div>
         <div>
-          <img src="https://picsum.photos/id/237/700/300" alt="" />
+          <img src="https://picsum.photos/id/227/600/300" alt="" />
           <p></p>
         </div>
         <div>
-          <img src="https://picsum.photos/id/237/700/300" alt="" />
+          <img src="https://picsum.photos/id/23/600/300" alt="" />
           <p></p>
         </div>
         <div>
-          <img src="https://picsum.photos/id/237/700/300" alt="" />
+          <img src="https://picsum.photos/id/137/600/300" alt="" />
           <p></p>
         </div>
         <div>
-          <img src="https://picsum.photos/id/237/700/300" alt="" />
+          <img src="https://picsum.photos/id/737/600/300" alt="" />
           <p></p>
         </div>
       </Carousel>

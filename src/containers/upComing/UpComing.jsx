@@ -25,7 +25,7 @@ const UpComing = () => {
     );
 
   return (
-    <>
+    <div className="section-wrapper">
       <h1 className="section-title" id="up-coming">Upcoming</h1>
       <div className="movies-container">
         {
@@ -33,7 +33,7 @@ const UpComing = () => {
             <Poster key={movieInfo.id} movieInfo={movieInfo} />
           ))}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -23,7 +23,7 @@ const PlayingNow = () => {
     );
 
   return (
-    <>
+    <div className="section-wrapper">
       <h1 className="section-title" id="playing-now">Playing Now</h1>
       <div className="movies-container">
         {
@@ -31,7 +31,7 @@ const PlayingNow = () => {
             <Poster key={movieInfo.id} movieInfo={movieInfo} />
           ))}
       </div>
-    </>
+    </div>
   );
 };
 
