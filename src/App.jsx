@@ -9,6 +9,7 @@ import {
   Hero
 } from "./containers/";
 import "./App.css";
+import Search from "./components/Search/Search";
 
 const queryClient = new QueryClient();
 
@@ -18,7 +19,7 @@ export default function App() {
       <div className="App">
         <Header />
         <Hero />
-        {/* <SEARCH/> */}
+        <Search/>
         <PlayingNow />
         <UpComing />
         <TopRated />

@@ -4,7 +4,7 @@ import { fetchMoviesList } from "../../hooks";
 import { ThreeDots } from "react-loader-spinner";
 import Poster from "../../components/Poster/Poster";
 
-import '../../App.css'
+import "../../App.css";
 
 const PlayingNow = () => {
   const { status, data } = useQuery(["playingNowMovies"], () =>
@@ -24,12 +24,13 @@ const PlayingNow = () => {
 
   return (
     <div className="section-wrapper">
-      <h1 className="section-title" id="playing-now">Playing Now</h1>
+      <h1 className="section-title" id="playing-now">
+        Playing Now
+      </h1>
       <div className="movies-container">
-        {
-          data.map(movieInfo => (
-            <Poster key={movieInfo.id} movieInfo={movieInfo} />
-          ))}
+        {data.map((movieInfo) => (
+          <Poster key={movieInfo.id} movieInfo={movieInfo} />
+        ))}
       </div>
     </div>
   );

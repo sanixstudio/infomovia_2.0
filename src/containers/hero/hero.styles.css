@@ -1,10 +1,18 @@
 .hero {
-    height: 100vh;
-    overflow: hidden;
+  height: 90vh;
+  overflow: hidden;
 }
 
-.hero-slider {}
+.hero-slider {
+  box-shadow: inset 0em 0em 20em 15em #111;
+}
 
 .hero-slider img {
-    max-width: 420px;
+  max-width: 420px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.legend {
+  font-size: 1.2rem !important;
 }
