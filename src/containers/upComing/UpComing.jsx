@@ -11,8 +11,6 @@ const UpComing = () => {
     fetchMoviesList(UP_COMING)
   );
 
-  console.log(data);
-
   if (status === "loading")
     return (
       <ThreeDots

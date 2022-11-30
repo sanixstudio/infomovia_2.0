@@ -16,10 +16,11 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="App">
-        <Header/>
+        <Header />
         <Hero />
+        {/* <SEARCH/> */}
         <PlayingNow />
-        <UpComing/>
+        <UpComing />
         <TopRated />
         <Footer />
       </div>

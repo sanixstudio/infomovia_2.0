@@ -1,0 +1,10 @@
+.hero {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-slider {}
+
+.hero-slider img {
+    max-width: 420px;
+}
