@@ -7,8 +7,6 @@ export default defineConfig({
     "process.env": {},
   },
   root: "src",
-  build: {
-    outDir: "/dist",
-  },
+  publicDir: "public",
   plugins: [react()],
 });
