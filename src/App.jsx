@@ -1,15 +1,8 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import {
-  PlayingNow,
-  UpComing,
-  TopRated,
-  Footer,
-  Header,
-  Hero
-} from "./containers/";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Search from "./components/Search/Search";
+import { About, Home } from "./pages";
 
 const queryClient = new QueryClient();
 
@@ -17,13 +10,11 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="App">
-        <Header />
-        <Hero />
-        <Search/>
-        <PlayingNow />
-        <UpComing />
-        <TopRated />
-        <Footer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<h1>404: Page not found</h1>} />
+        </Routes>
       </div>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { PLAYING_NOW } from "../../utils/constants";
 import { fetchMoviesList } from "../../hooks";
 import { ThreeDots } from "react-loader-spinner";
-import Poster from "../../components/Poster/Poster";
+import { Poster } from "../../components";
 
 import "../../App.css";
 

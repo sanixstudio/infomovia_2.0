@@ -1,7 +1,7 @@
 import React from "react";
 import "./search.styles.css";
 
-const Search = () => {
+const SearchBar = () => {
   return (
     <div className="search">
       <input type="text" name="" placeholder="Enter movie name" />
@@ -10,4 +10,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchBar;

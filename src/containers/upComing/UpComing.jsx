@@ -2,9 +2,9 @@ import { useQuery } from "@tanstack/react-query";
 import { UP_COMING } from "../../utils/constants";
 import { fetchMoviesList } from "../../hooks";
 import { ThreeDots } from "react-loader-spinner";
-import Poster from "../../components/Poster/Poster";
 
-import '../../App.css'
+import { Poster } from "../../components";
+import "../../App.css";
 
 const UpComing = () => {
   const { status, data } = useQuery(["upComingMovies"], () =>
@@ -24,12 +24,13 @@ const UpComing = () => {
 
   return (
     <div className="section-wrapper">
-      <h1 className="section-title" id="up-coming">Upcoming</h1>
+      <h1 className="section-title" id="up-coming">
+        Upcoming
+      </h1>
       <div className="movies-container">
-        {
-          data.map(movieInfo => (
-            <Poster key={movieInfo.id} movieInfo={movieInfo} />
-          ))}
+        {data.map((movieInfo) => (
+          <Poster key={movieInfo.id} movieInfo={movieInfo} />
+        ))}
       </div>
     </div>
   );
