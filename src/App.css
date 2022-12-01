@@ -1,6 +1,9 @@
 :root {
   --primary: #0BC9C1;
+  --lightTeal: #abe7e4;
+  --darkTeal: #06ada5;
   --textColor: #FFFFEB;
+  --largText: 1.2rem;
 }
 
 * {
