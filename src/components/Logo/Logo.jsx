@@ -1,7 +1,15 @@
+import { Link } from "react-router-dom";
+
 export default function Logo() {
   return (
     <div>
-      <img src="/images/infomovia.png" alt="logo" style={{ width: "150px" }} />
+      <Link to="/">
+        <img
+          src="/images/infomovia.png"
+          alt="logo"
+          style={{ width: "200px" }}
+        />
+      </Link>
     </div>
   );
 }

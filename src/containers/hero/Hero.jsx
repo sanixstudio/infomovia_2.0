@@ -3,7 +3,7 @@ import React from "react";
 import { ThreeDots } from "react-loader-spinner";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { fetchMoviesList } from "../../hooks";
+import { fetchMoviesList } from "../../services";
 import { BACKDROP_1280, UP_COMING } from "../../utils/constants";
 
 import "./hero.styles.css";

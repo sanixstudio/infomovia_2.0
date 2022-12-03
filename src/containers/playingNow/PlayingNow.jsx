@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
-import { PLAYING_NOW } from "../../utils/constants";
-import { fetchMoviesList } from "../../hooks";
 import { ThreeDots } from "react-loader-spinner";
+import { fetchMoviesList } from "../../services";
 import { Poster } from "../../components";
+import { PLAYING_NOW } from "../../utils/constants";
 
 import "../../App.css";
 
