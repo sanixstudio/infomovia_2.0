@@ -1,5 +1,6 @@
 import React from "react";
 import { SearchBar } from "../../components";
+import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
 import {
   Header,
   Hero,
@@ -19,6 +20,7 @@ const Home = () => {
       <UpComing />
       <TopRated />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
