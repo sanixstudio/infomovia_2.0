@@ -1,15 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
 import { ThreeDots } from "react-loader-spinner";
-import { fetchMoviesList } from "../../services";
 import { Poster } from "../../components";
-import { PLAYING_NOW } from "../../utils/constants";
-
+import { useGetMovies } from "../../hooks/useFetch";
 import "../../App.css";
 
 const PlayingNow = () => {
-  const { status, data } = useQuery(["playingNowMovies"], () =>
-    fetchMoviesList(PLAYING_NOW)
-  );
+  const { data, status } = useGetMovies("playingNow");
 
   if (status === "loading")
     return (

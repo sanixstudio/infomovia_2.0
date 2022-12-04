@@ -1,15 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
-import { TOP_RATED } from "../../utils/constants";
-import { fetchMoviesList } from "../../services";
 import { ThreeDots } from "react-loader-spinner";
-
 import { Poster } from "../../components";
 import "../../App.css";
+import { useGetMovies } from "../../hooks/useFetch";
 
 const TopRated = () => {
-  const { status, data } = useQuery(["topRatedMovies"], () =>
-    fetchMoviesList(TOP_RATED)
-  );
+  const { status, data } = useGetMovies("topRatedMovies");
 
   if (status === "loading")
     return (

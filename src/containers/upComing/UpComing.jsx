@@ -1,15 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
-import { UP_COMING } from "../../utils/constants";
-import { fetchMoviesList } from "../../services";
 import { ThreeDots } from "react-loader-spinner";
-
 import { Poster } from "../../components";
+import { useGetMovies } from "../../hooks/useFetch";
 import "../../App.css";
 
 const UpComing = () => {
-  const { status, data } = useQuery(["upComingMovies"], () =>
-    fetchMoviesList(UP_COMING)
-  );
+  const { status, data } = useGetMovies("upComingMovies");
 
   if (status === "loading")
     return (

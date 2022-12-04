@@ -1,8 +1,8 @@
-export const fetchMoviesList = async (endPoint) => {
+export const fetchMoviesList = async (apiLink) => {
   try {
-    const res = await (await fetch(endPoint)).json();
+    const res = await (await fetch(apiLink)).json();
     return res.results;
   } catch (err) {
-    console.log(err.message);
+    console.error(err.message);
   }
 };
