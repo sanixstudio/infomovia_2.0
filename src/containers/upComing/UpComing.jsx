@@ -1,10 +1,11 @@
 import { ThreeDots } from "react-loader-spinner";
 import { Poster } from "../../components";
 import { useGetMovies } from "../../hooks/useFetch";
+import { UP_COMING } from "../../utils/constants";
 import "../../App.css";
 
 const UpComing = () => {
-  const { status, data } = useGetMovies("upComingMovies");
+  const { status, data } = useGetMovies("upComingMovies", UP_COMING);
 
   if (status === "loading")
     return (

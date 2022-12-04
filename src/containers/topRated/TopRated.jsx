@@ -2,9 +2,10 @@ import { ThreeDots } from "react-loader-spinner";
 import { Poster } from "../../components";
 import "../../App.css";
 import { useGetMovies } from "../../hooks/useFetch";
+import { TOP_RATED } from "../../utils/constants";
 
 const TopRated = () => {
-  const { status, data } = useGetMovies("topRatedMovies");
+  const { status, data } = useGetMovies("topRatedMovies", TOP_RATED);
 
   if (status === "loading")
     return (
