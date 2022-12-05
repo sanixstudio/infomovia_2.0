@@ -24,8 +24,6 @@ const Hero = () => {
       />
     );
 
-  console.log(data);
-
   return (
     <div className="hero">
       <Carousel autoPlay infiniteLoop>
