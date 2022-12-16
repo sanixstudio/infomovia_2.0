@@ -3,26 +3,32 @@ import { SEARCH_URL } from "../../utils/constants";
 import { useGetMovies } from "../../hooks/useFetch";
 import "./search.styles.css";
 import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
 const SearchBar = () => {
-  const [query, setQuery] = useState("");
-  const { status, data } = useGetMovies("searchQuery", SEARCH_URL + query);
+  const [searchKeywords, setSearchKeywords] = useState("");
 
-  // if (status === "loading")
-  //   return (
-  //     <ThreeDots
-  //       height="80"
-  //       width="80"
-  //       radius="9"
-  //       color="#0BC9C1"
-  //       ariaLabel="three-dots-loading"
-  //     />
-  //   );
+  const { status, data, refetch } = useQuery(
+    ["searchMovies", searchKeywords],
+    async () => {
+      try {
+        const res =
+          searchKeywords &&
+          (await (await fetch(SEARCH_URL + searchKeywords)).json());
+        return res.results;
+      } catch (err) {
+        console.error(err.message);
+      }
+    },
+    {
+      enabled: false,
+      refetchOnWindowFocus: false,
+    }
+  );
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Searching...");
-    console.log(inputRef);
+    refetch();
   };
 
   return (
@@ -30,8 +36,8 @@ const SearchBar = () => {
       <input
         type="text"
         placeholder="Enter movie name"
-        ref={inputRef}
-        value={inputRef.current.value}
+        onChange={(e) => setSearchKeywords(e.target.value)}
+        value={searchKeywords}
       />
       <button>Search</button>
     </form>
