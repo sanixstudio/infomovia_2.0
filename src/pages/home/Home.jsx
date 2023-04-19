@@ -1,5 +1,4 @@
 import React from "react";
-import { SearchBar } from "../../components";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
 import {
   Header,
@@ -15,7 +14,6 @@ const Home = () => {
     <div>
       <Header />
       <Hero />
-      <SearchBar />
       <PlayingNow />
       <UpComing />
       <TopRated />

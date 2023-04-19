@@ -1,5 +1,4 @@
 .hero {
-  height: 90vh;
   overflow: hidden;
 }
 
@@ -8,9 +7,28 @@
 }
 
 .hero-slider img {
-  max-width: 420px;
+  max-height: 560px;
   border-radius: 10px;
   object-fit: cover;
+}
+
+.hero-slider::before, .hero-slider::after {
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 100%;
+  top: 0;
+}
+
+.hero-slider::before {
+  left: 0;
+  background: linear-gradient(to right, #111, transparent);
+}
+
+.hero-slider::after {
+  right: 0;
+  background: linear-gradient(to left, #111, transparent);
+
 }
 
 .legend {

@@ -1,9 +1,10 @@
 import React, { createRef } from "react";
 import { SEARCH_URL } from "../../utils/constants";
 import { useGetMovies } from "../../hooks/useFetch";
-import "./search.styles.css";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+
+import "./search.styles.css";
 
 const SearchBar = () => {
   const [searchKeywords, setSearchKeywords] = useState("");

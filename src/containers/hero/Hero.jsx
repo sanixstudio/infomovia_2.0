@@ -1,12 +1,12 @@
-import { useQuery } from "@tanstack/react-query";
 import React from "react";
+import { useQuery } from "@tanstack/react-query";
 import { ThreeDots } from "react-loader-spinner";
 import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { fetchMoviesList } from "../../services";
 import { BACKDROP_1280, UP_COMING } from "../../utils/constants";
 
 import "./hero.styles.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Hero = () => {
   const { status, data } = useQuery(["getHeroImages"], () =>
