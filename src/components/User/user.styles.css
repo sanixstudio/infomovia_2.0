@@ -1,7 +1,52 @@
+.user-controls {
+  position: relative;
+}
+
+.user-menu {
+  background-color: var(--primary);
+  padding: 0.5em 0.8em;
+  align-items: center;
+  cursor: pointer;
+}
+
 .user-button {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   gap: 0.5em;
+}
+
+.user-menu,
+.user-options {
+  border-radius: 5px;
+}
+
+.user-options,
+.user-menu,
+.user-options > div {
+  display: flex;
+  gap: 1em;
+}
+
+.user-options {
+  min-width: 170px;
+  flex-direction: column;
+  background: #eee;
+  position: absolute;
+  color: #000;
+  padding: 1em;
+  z-index: 100;
+  right: 0;
+  top: 100%;
+}
+
+.user-options > div {
+  width: 100%;
+  cursor: pointer;
+}
+
+.user-logout {
+  padding-top: 1em;
+  border-top: 1px solid var(--lightHr);
 }
