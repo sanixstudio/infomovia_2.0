@@ -10,9 +10,12 @@ const Poster = ({ movieInfo }) => {
     <div className="poster">
       <img src={POSTER_IMG} alt="" />
       <p className="title">{movieInfo.title}</p>
+      <div>
+        {YEAR_RELEASED} {}
+      </div>
       <div className="poster-backdrop">
         <p>
-          {movieInfo.title} ({YEAR_RELEASED})
+          {movieInfo.title} ({movieInfo.adult ? "PG-13" : null})
         </p>
       </div>
     </div>

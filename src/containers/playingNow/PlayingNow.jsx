@@ -2,6 +2,7 @@ import { ThreeDots } from "react-loader-spinner";
 import { Poster } from "../../components";
 import { useGetMovies } from "../../hooks/useFetch";
 import { PLAYING_NOW } from "../../utils/constants";
+
 import "../../App.css";
 
 const PlayingNow = () => {

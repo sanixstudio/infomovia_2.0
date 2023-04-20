@@ -1,5 +1,6 @@
 import React from "react";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
+import TabbedMenu from "../../components/TabbedMenu/TabbedMenu";
 import {
   Header,
   Hero,
@@ -10,13 +11,17 @@ import {
 } from "../../containers";
 
 const Home = () => {
+  const tabs = [
+    { label: "Playing Now", component: <PlayingNow /> },
+    { label: "Upcoming", component: <UpComing /> },
+    { label: "Top Rated", component: <TopRated /> },
+  ];
+
   return (
     <div>
       <Header />
       <Hero />
-      <PlayingNow />
-      <UpComing />
-      <TopRated />
+      <TabbedMenu tabs={tabs} />
       <Footer />
       <ScrollToTop />
     </div>
