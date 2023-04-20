@@ -32,5 +32,26 @@
 }
 
 .legend {
-  font-size: 1.1rem !important;
+  font-size: 1rem !important;
+  opacity: 1 !important;
+  text-align: left !important;
+  border-radius: 5px !important;
+  background-color: rgba(0, 0, 0, .2) !important;
+
+}
+
+.legend-title {
+  font-size: 3rem;
+  margin-bottom: 1em;
+  text-shadow: 3px 3px #000;
+}
+
+.legend-overview {
+  line-height: 22px;
+  letter-spacing: .3px;
+}
+
+.selected p{
+  max-width: 600px;
+  opacity: 1 !important;
 }
