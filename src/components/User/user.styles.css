@@ -1,0 +1,7 @@
+.user-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 0.5em;
+}

@@ -1,8 +1,9 @@
 import React, { createRef } from "react";
 import { SEARCH_URL } from "../../utils/constants";
-import { useGetMovies } from "../../hooks/useFetch";
+// import { useGetMovies } from "../../hooks/useFetch";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { AiOutlineSearch } from "react-icons/ai";
 
 import "./search.styles.css";
 
@@ -33,14 +34,17 @@ const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="search">
+    <form className="search-bar">
       <input
         type="text"
-        placeholder="Enter movie name"
-        onChange={(e) => setSearchKeywords(e.target.value)}
+        placeholder="Search..."
+        className="search-input"
         value={searchKeywords}
+        onChange={(e) => setSearchKeywords(e.target.value)}
       />
-      <button>Search</button>
+      <button type="submit" className="search-button">
+        <AiOutlineSearch className="search-icon" />
+      </button>
     </form>
   );
 };

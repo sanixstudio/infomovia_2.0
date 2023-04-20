@@ -24,10 +24,10 @@ body {
 
 .App {
   font-family: sans-serif;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
   color: var(--textColor);
-  padding: 1em;
+  padding: 0 1em;
 }
 
 a {
