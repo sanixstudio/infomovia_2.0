@@ -36,11 +36,13 @@
   opacity: 1 !important;
   text-align: left !important;
   border-radius: 5px !important;
-  background-color: rgba(0, 0, 0, 0.2) !important;
+  /* background-color: rgba(0, 0, 0, 0.2) !important; */
+  background: linear-gradient(to top, #000, transparent) !important;
   width: 100% !important;
   left: 45% !important;
   bottom: 0 !important;
   padding: 2em 4em !important;
+  padding-bottom: 4em !important;
 }
 
 .legend-title {
