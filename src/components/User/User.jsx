@@ -6,11 +6,14 @@ import { MdLogout } from "react-icons/md";
 import "./user.styles.css";
 
 const User = () => {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState(null);
   const [isOpen, setIsopen] = useState(false);
 
   return (
     <>
+      <button onClick={() => (user ? setUser(null) : setUser("Adi"))}>
+        click
+      </button>
       {user ? (
         <div className="user-controls">
           <div className="user-menu" onClick={() => setIsopen(!isOpen)}>
