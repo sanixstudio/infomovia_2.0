@@ -1,5 +1,4 @@
-import {Logo, NavBar, SearchBar} from "../../components";
-import User from "../../components/user/User";
+import {Logo, NavBar, SearchBar, User} from "../../components";
 import './header.styles.css'
 
 const Header = () => {

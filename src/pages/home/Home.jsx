@@ -18,13 +18,13 @@ const Home = () => {
   ];
 
   return (
-    <div>
+    <>
       <Header />
       <Hero />
       <TabbedMenu tabs={tabs} />
       <Footer />
       <ScrollToTop />
-    </div>
+    </>
   );
 };
 
