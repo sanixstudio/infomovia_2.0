@@ -12,8 +12,8 @@ import {
 
 const Home = () => {
   const tabs = [
-    { label: "Playing Now", component: <PlayingNow /> },
     { label: "Upcoming", component: <UpComing /> },
+    { label: "Playing Now", component: <PlayingNow /> },
     { label: "Top Rated", component: <TopRated /> },
   ];
 

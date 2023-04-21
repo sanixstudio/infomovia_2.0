@@ -8,6 +8,8 @@ import "../../App.css";
 const PlayingNow = () => {
   const { data, status } = useGetMovies("playingNow", PLAYING_NOW);
 
+  console.log(PLAYING_NOW)
+
   if (status === "loading")
     return (
       <ThreeDots
@@ -18,6 +20,8 @@ const PlayingNow = () => {
         ariaLabel="three-dots-loading"
       />
     );
+
+  // if (data !== "success") return "oops";
 
   return (
     <div className="section-wrapper">

@@ -1,0 +1,99 @@
+.single-movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .movie-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+  }
+  
+  .movie-poster {
+    width: 300px;
+    height: 450px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .movie-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .movie-release-date,
+  .movie-popularity {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .movie-rating {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .movie-rating-icon {
+    color: #ffd700;
+    margin-right: 0.5rem;
+  }
+  
+  .movie-genres {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  
+  .movie-genre {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    background-color: #0d1117;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+    margin-bottom: 0.5rem;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .single-movie {
+      padding: 1rem;
+    }
+  
+    .movie-info {
+      margin-left: 0;
+      margin-top: 1rem;
+      align-items: center;
+    }
+  
+    .movie-poster {
+      width: 200px;
+      height: 300px;
+      margin-bottom: 1rem;
+    }
+  
+    .movie-title {
+      font-size: 1.5rem;
+    }
+  
+    .movie-release-date,
+    .movie-popularity {
+      font-size: 1rem;
+    }
+  
+    .movie-rating {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    .movie-genre {
+      font-size: 1rem;
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem;
+      padding: 0.15rem 0.25rem;
+    }
+  }
+  

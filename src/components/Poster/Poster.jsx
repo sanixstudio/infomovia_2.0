@@ -7,18 +7,20 @@ const Poster = ({ movieInfo }) => {
   const YEAR_RELEASED = movieInfo.release_date.split("-")[0];
 
   return (
-    <div className="poster">
-      <img src={POSTER_IMG} alt="" />
-      <p className="title">{movieInfo.title}</p>
-      <div>
-        {YEAR_RELEASED} {}
+    <a href={"/" + movieInfo.id}>
+      <div className="poster">
+        <img src={POSTER_IMG} alt="" />
+        <p className="title">{movieInfo.title}</p>
+        <div>
+          {YEAR_RELEASED} {}
+        </div>
+        <div className="poster-backdrop">
+          <p>
+            {movieInfo.title} ({movieInfo.adult ? "PG-13" : null})
+          </p>
+        </div>
       </div>
-      <div className="poster-backdrop">
-        <p>
-          {movieInfo.title} ({movieInfo.adult ? "PG-13" : null})
-        </p>
-      </div>
-    </div>
+    </a>
   );
 };
 
