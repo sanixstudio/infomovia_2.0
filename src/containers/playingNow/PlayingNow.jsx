@@ -21,9 +21,9 @@ const PlayingNow = () => {
 
   return (
     <div className="section-wrapper">
-      <h1 className="section-title" id="playing-now">
+      {/* <h1 className="section-title" id="playing-now">
         Playing Now
-      </h1>
+      </h1> */}
       <div className="movies-container">
         {data.map((movieInfo) => (
           <Poster key={movieInfo.id} movieInfo={movieInfo} />

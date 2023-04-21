@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./tabbedMenu.styles.css";
 
 const TabbedMenu = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState(0);
@@ -20,6 +21,7 @@ const TabbedMenu = ({ tabs }) => {
           </button>
         ))}
       </div>
+      {tabs[activeTab].label}
       <div className="tab-content">{tabs[activeTab].component}</div>
     </div>
   );

@@ -21,9 +21,6 @@ const TopRated = () => {
 
   return (
     <div className="section-wrapper">
-      <h1 className="section-title" id="top-rated">
-        Top Rated
-      </h1>
       <div className="movies-container">
         {data.map((movieInfo) => (
           <Poster key={movieInfo.id} movieInfo={movieInfo} />
