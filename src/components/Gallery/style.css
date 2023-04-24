@@ -1,0 +1,11 @@
+.containerClass {
+  /* background: teal; */
+}
+
+.react-multi-carousel-track {
+}
+
+.react-multi-carousel-item {
+  background: teal;
+  max-width: 600px;
+}

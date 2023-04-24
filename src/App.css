@@ -25,7 +25,7 @@ body {
 
 .App {
   font-family: sans-serif;
-  max-width: 1440px;
+  max-width: 1503px;
   margin: 0 auto;
   color: var(--textColor);
   padding: 0 1em;
@@ -48,7 +48,7 @@ a:hover {
 .movies-container {
   display: flex;
   flex-wrap:wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1.5em;
 }
 
