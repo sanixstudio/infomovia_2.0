@@ -15,9 +15,7 @@ const Poster = ({ movieInfo }) => {
           {YEAR_RELEASED} {}
         </div>
         <div className="poster-backdrop">
-          <p>
-            {movieInfo.title} ({movieInfo.adult ? "PG-13" : null})
-          </p>
+          <p>{movieInfo.title}</p>
         </div>
       </div>
     </a>

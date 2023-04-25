@@ -5,7 +5,11 @@
   --translucentTeal: #0bc9bf9a;
   --textColor: #ffffeb;
   --lightHr: #c1c1c1;
-  --largText: 1.2rem;
+  --largeText: 1.2rem;
+  --yellow: #ffd700;
+  --blue: #388edf;
+  --green: #84e96a;
+  --purple: #af4dda;
 }
 
 * {
@@ -47,7 +51,7 @@ a:hover {
 
 .movies-container {
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1.5em;
 }
