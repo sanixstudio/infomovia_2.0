@@ -4,19 +4,20 @@ import { IoMdHeart } from "react-icons/io";
 import { MdLogout } from "react-icons/md";
 
 import "./user.styles.css";
+import Modal from "../LoginRegisterModal/LoginRegisterModal.jsx";
 
 const User = () => {
   const [user, setUser] = useState(null);
-  const [isOpen, setIsopen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+
+  const closeModal = () => setOpenModal(false);
 
   return (
     <>
-      <button onClick={() => (user ? setUser(null) : setUser("Adi"))}>
-        click
-      </button>
       {user ? (
         <div className="user-controls">
-          <div className="user-menu" onClick={() => setIsopen(!isOpen)}>
+          <div className="user-menu" onClick={() => setIsOpen(!isOpen)}>
             <FaUserCircle size={24} />
             <span>{user}</span>
           </div>
@@ -39,11 +40,12 @@ const User = () => {
           </div>
         </div>
       ) : (
-        <div className="user-button" onClick={() => alert("hi")}>
+        <div className="user-button" onClick={() => setOpenModal(true)}>
           <FaUserCircle size={24} />
           <span>Login/ Register</span>
         </div>
       )}
+      <Modal closeModal={closeModal} openModal={openModal} />
     </>
   );
 };

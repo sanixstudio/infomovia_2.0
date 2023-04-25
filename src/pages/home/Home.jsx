@@ -1,6 +1,7 @@
 import React from "react";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
 import TabbedMenu from "../../components/TabbedMenu/TabbedMenu";
+import { useCookies } from "react-cookie";
 import {
   Header,
   Hero,
@@ -16,6 +17,10 @@ const Home = () => {
     { label: "Playing Now", component: <PlayingNow /> },
     { label: "Top Rated", component: <TopRated /> },
   ];
+
+  const [cookies, setCookie] = useCookies(["token"]);
+
+  console.log(cookies);
 
   return (
     <>
