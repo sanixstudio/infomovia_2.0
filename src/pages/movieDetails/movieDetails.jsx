@@ -13,6 +13,7 @@ import {
   BsHandThumbsUpFill,
   BsCameraReelsFill,
   BsStarFill,
+  BsFillPlusCircleFill,
 } from "react-icons/bs";
 import { GiProgression } from "react-icons/gi";
 
@@ -55,7 +56,7 @@ const MovieDetails = () => {
               <p className="movie-release-date">
                 <span className="movie-detail-icon calendar">
                   <BsCalendarDateFill />
-                </span>{" "}
+                </span>
                 Date Released: {data.release_date}
               </p>
               <p className="movie-popularity">
@@ -100,6 +101,10 @@ const MovieDetails = () => {
                 <span className="overview-title">Overview:</span>{" "}
                 {data.overview}
               </p>
+              <button>
+                <BsFillPlusCircleFill color="white" size={24} />
+                Add to WishList
+              </button>
             </div>
           </div>
         </div>
