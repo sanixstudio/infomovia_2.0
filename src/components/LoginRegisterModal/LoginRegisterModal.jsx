@@ -38,11 +38,11 @@ function Modal({ closeModal, openModal }) {
           </span>
           <h2 className="form-title">Log in</h2>
           <div className="form-group">
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input type="email" id="email" name="email" required />
           </div>
           <div className="form-group">
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <input type="password" id="password" name="password" required />
           </div>
           <div className="form-group">

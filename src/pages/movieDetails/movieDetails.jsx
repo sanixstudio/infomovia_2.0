@@ -27,11 +27,11 @@ const MovieDetails = () => {
     return movieDetails;
   };
 
-  const { data, status } = useQuery(["playingNow"], fetchMovieDetails);
+  const { data, status } = useQuery(["getMovieDetails"], fetchMovieDetails);
 
   if (status !== "success") return <ThreeDots />;
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <>
