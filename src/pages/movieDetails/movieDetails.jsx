@@ -31,8 +31,6 @@ const MovieDetails = () => {
 
   if (status !== "success") return <ThreeDots />;
 
-  // console.log(data);
-
   return (
     <>
       <Header />
@@ -114,5 +112,5 @@ const MovieDetails = () => {
     </>
   );
 };
-
+``;
 export default MovieDetails;
