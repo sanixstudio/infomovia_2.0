@@ -1,23 +1,32 @@
+import React, { useEffect } from "react";
 import "./navBar.styles.css";
-import React from "react";
+import { GENRES, GENRES_URL } from "../../utils/constants";
+
+const genreList = Object.keys(GENRES.movies);
+
+console.log(genreList);
 
 const index = () => {
+  const [selectedGenre, setSelectedGenre] = [""];
+
+  console.log(GENRES_URL);
+
+  //TODO: make page for genre
+  // Setup the Context for Add to favorites
+
   return (
-    <div>
-      <ul className="nav-bar">
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="#playing-now">Playing Now</a>
-        </li>
-        <li>
-          <a href="#up-coming">Upcoming</a>
-        </li>
-        <li>
-          <a href="#top-rated">Top Rated</a>
-        </li>
-      </ul>
+    <div className="nav-bar">
+      <a href="/">Home</a>
+      <div className="genre-list-wrapper">
+        <span className="genre">Genre</span>
+        <ul className="genre-list">
+          {genreList.map((genre) => (
+            <li>
+              <a href="#">{genre}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

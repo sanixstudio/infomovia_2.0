@@ -4,8 +4,46 @@
   list-style: none;
 }
 
-.nav-bar li a {
+.nav-bar a {
   text-decoration: none;
+}
+
+.genre-list-wrapper {
+  position: relative;
+}
+
+.genre-list {
+  background: #333;
+  border-radius: 8px;
+  list-style: none;
+  padding: 1em;
+  position: absolute;
+  max-height: 330px;
+  width: 350px;
+  top: 1em;
+  right: 0;
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.8em;
+}
+
+.genre:hover + .genre-list {
+  display: flex;
+}
+
+.genre-list:hover {
+  display: flex;
+}
+
+.genre-list li a {
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.genre-list li a:hover {
+  background-color: #222;
 }
 
 @media (max-width: 668px) {

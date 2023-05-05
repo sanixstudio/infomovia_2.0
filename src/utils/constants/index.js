@@ -6,6 +6,7 @@ export const PLAYING_NOW = `${BASE_URL}movie/now_playing?language=en-US&api_key=
 export const UP_COMING = `${BASE_URL}movie/upcoming?language=en-US&api_key=${API_KEY}`;
 export const TOP_RATED = `${BASE_URL}movie/top_rated?language=en-US&api_key=${API_KEY}`;
 export const SEARCH_URL = `${BASE_URL}search/movie?api_key=${API_KEY}&language=en-US&query=`;
+export const GENRES_URL = `${BASE_URL}discover/movie?api_key=${API_KEY}&with_genres=`;
 
 export const GENRES = {
   movies: {
