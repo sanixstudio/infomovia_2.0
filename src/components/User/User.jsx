@@ -4,7 +4,7 @@ import { IoMdHeart } from "react-icons/io";
 import { MdLogout } from "react-icons/md";
 
 import "./user.styles.css";
-import Modal from "../LoginRegisterModal/LoginRegisterModal.jsx";
+import Modal from "../LoginRegisterModal/LoginModal.jsx";
 
 const User = () => {
   const [user, setUser] = useState(null);

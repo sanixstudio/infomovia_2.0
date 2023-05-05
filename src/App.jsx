@@ -2,8 +2,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import { About, Home } from "./pages";
-import Single from "./pages/single/Single";
+import { About, Home, Single } from "./pages";
 
 const queryClient = new QueryClient();
 
