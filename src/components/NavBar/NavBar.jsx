@@ -1,15 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useContext } from "react";
+import { GENRES } from "../../utils/constants";
+import { UserContext } from "../../context/userContext";
+import { BsBasket3 } from "react-icons/bs";
 import "./navBar.styles.css";
-import { GENRES, GENRES_URL } from "../../utils/constants";
 
 const genreList = Object.keys(GENRES.movies);
 
 console.log(genreList);
 
 const index = () => {
-  const [selectedGenre, setSelectedGenre] = [""];
-
-  console.log(GENRES_URL);
+  const { wishList, addToWishList } = useContext(UserContext);
+  // const [selectedGenre, setSelectedGenre] = [""];
 
   //TODO: make page for genre
   // Setup the Context for Add to favorites
@@ -27,6 +28,10 @@ const index = () => {
           ))}
         </ul>
       </div>
+      <a href="/wish-list">
+        <span>WishList </span>
+        <span className="wish-items">{wishList.length}</span>
+      </a>
     </div>
   );
 };

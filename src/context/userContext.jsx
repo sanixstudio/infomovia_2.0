@@ -4,9 +4,15 @@ import { useCookies } from "react-cookie";
 export const UserContext = createContext();
 
 const UserContextProvider = ({ children }) => {
-  const [cookies, setCookie] = useCookies();
+  const getWishListFromStorage = () => {
+    const wishList = JSON.parse(localStorage.getItem("wishList"));
+    if (wishList) return wishList;
+    return [];
+  };
+
+  const [cookies, setCookie] = useCookies(["token"]);
   const [user, setUser] = useState(null);
-  const [wishList, setWishList] = useState([]);
+  const [wishList, setWishList] = useState(getWishListFromStorage());
 
   const login = (userData) => {
     setUser(userData);
@@ -15,10 +21,13 @@ const UserContextProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     setWishList([]);
+    localStorage.removeItem("wishList");
   };
 
   const addToWishList = (item) => {
-    setWishList([...wishList, item]);
+    const newList = [...wishList, item];
+    setWishList(newList);
+    localStorage.setItem("wishList", JSON.stringify(newList));
   };
 
   const removeFromWishList = (item) => {
@@ -26,12 +35,13 @@ const UserContextProvider = ({ children }) => {
       (wishListItem) => wishListItem.id !== item.id
     );
     setWishList(updatedWishList);
+    localStorage.setItem("wishList", JSON.stringify(updatedWishList));
   };
 
   useEffect(() => {
     if (cookies.token) {
       // TODO: Authenticate using cookies
-      setUser({ name: "Adi", email: "adi@gmail.com" })
+      setUser({ name: "Adi", email: "adi@gmail.com" });
     }
   }, [cookies.token]);
 

@@ -31,7 +31,7 @@ function RegisterForm({ isOpen, setIsOpen }) {
       }`}
     >
       <form className="register-form" onSubmit={handleSubmit}>
-        <button className="modal-close-btn">
+        <button className="modal-close-btn" onClick={() => setIsOpen(false)}>
           <AiOutlineCloseCircle />
         </button>
         <h2 className="form-title">Register</h2>

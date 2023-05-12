@@ -8,6 +8,7 @@
   text-decoration: none;
 }
 
+.wish-list-btn,
 .genre-list-wrapper {
   position: relative;
 }
@@ -44,6 +45,13 @@
 
 .genre-list li a:hover {
   background-color: #222;
+}
+
+.wish-items {
+  color: #fff;
+  padding: .3em .5em;
+  border-radius: 5px;
+  background: teal;
 }
 
 @media (max-width: 668px) {

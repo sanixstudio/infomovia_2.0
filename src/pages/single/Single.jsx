@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import classNames from "classnames";
-import "./single.style.css";
-
 import { Footer, Header } from "../../containers";
 import { ScrollToTop } from "../../components";
 import { useQuery } from "@tanstack/react-query";
-import { API_KEY, BACKDROP_1280, BASE_URL } from "../../utils/constants";
+import { BACKDROP_1280, BASE_URL } from "../../utils/constants";
 import { useParams } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
 import {
@@ -15,9 +13,13 @@ import {
   BsStarFill,
   BsFillPlusCircleFill,
 } from "react-icons/bs";
+import { AiOutlineCheck } from "react-icons/ai";
 import { GiProgression } from "react-icons/gi";
+import { UserContext } from "../../context/userContext";
+import "./single.style.css";
 
 const Single = () => {
+  const { wishList, addToWishList } = useContext(UserContext);
   const { id } = useParams();
   const URL = `${BASE_URL}/movie/${id}?language=en-US&api_key=${
     import.meta.env.VITE_API_KEY
@@ -32,6 +34,12 @@ const Single = () => {
   const { data, status } = useQuery(["getMovieDetails"], fetchMovieDetails);
 
   if (status !== "success") return <ThreeDots />;
+
+  console.log(wishList);
+
+  const existsInWishList = (id) => {
+    return wishList.find((el) => el.id === id);
+  };
 
   return (
     <>
@@ -101,9 +109,21 @@ const Single = () => {
                 <span className="overview-title">Overview:</span>{" "}
                 {data.overview}
               </p>
-              <button>
-                <BsFillPlusCircleFill color="white" size={24} />
-                Add to WishList
+              <button
+                onClick={() => addToWishList(data)}
+                disabled={existsInWishList(data.id)}
+              >
+                {existsInWishList(data.id) ? (
+                  <>
+                    <AiOutlineCheck color="white" size={24} />
+                    Already in List
+                  </>
+                ) : (
+                  <>
+                    <BsFillPlusCircleFill color="white" size={24} />
+                    Add to WishList
+                  </>
+                )}
               </button>
             </div>
           </div>
