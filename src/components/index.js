@@ -1,5 +1,5 @@
 export { default as Gallery } from "./Gallery/Gallery";
-export { default as LoginRegisterModal } from "./LoginRegisterModal/LoginModal";
+export { default as LoginModal } from "./LoginModal/LoginModal";
 export { default as Logo } from "./Logo/Logo";
 export { default as NavBar } from "./NavBar/NavBar";
 export { default as Poster } from "./Poster/Poster";

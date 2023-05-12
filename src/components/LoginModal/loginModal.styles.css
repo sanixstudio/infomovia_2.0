@@ -1,0 +1,110 @@
+.register-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  position: fixed;
+}
+
+.hidden {
+  display: none;
+}
+
+.show-with-flex {
+  display: flex;
+}
+
+.show-with-block {
+  display: block;
+}
+
+.register-form {
+  padding: 2em;
+  border-radius: 8px;
+  color: #000;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: .4em;
+  right: .4em;
+  display: flex;
+  justify-content: center;
+  border: none;
+  font-size: 1.8rem;
+}
+
+.modal-close-btn:hover {
+  border-radius: 50%;
+  cursor: pointer;
+  color: #777;
+}
+
+.form-title {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 2em;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1em;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.form-group input {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-button:hover {
+  background-color: #555;
+}
+
+.submit-button {
+  margin-right: 0.5em;
+}
+
+.cancel-button {
+  background-color: transparent;
+  color: #333;
+  margin-left: 0.5em;
+}
+
+.cancel-button:hover {
+  text-decoration: underline;
+  color: #fff;
+}

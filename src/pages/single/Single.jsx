@@ -19,7 +19,9 @@ import { GiProgression } from "react-icons/gi";
 
 const Single = () => {
   const { id } = useParams();
-  const URL = `${BASE_URL}/movie/${id}?language=en-US&api_key=${API_KEY}`;
+  const URL = `${BASE_URL}/movie/${id}?language=en-US&api_key=${
+    import.meta.env.VITE_API_KEY
+  }`;
 
   const fetchMovieDetails = async () => {
     const res = await fetch(URL);

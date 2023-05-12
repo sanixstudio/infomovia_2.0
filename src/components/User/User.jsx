@@ -4,14 +4,11 @@ import { IoMdHeart } from "react-icons/io";
 import { MdLogout } from "react-icons/md";
 
 import "./user.styles.css";
-import Modal from "../LoginRegisterModal/LoginModal.jsx";
+import Modal from "../LoginModal/LoginModal";
 
 const User = () => {
   const [user, setUser] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
-
-  const closeModal = () => setOpenModal(false);
 
   return (
     <>
@@ -40,12 +37,12 @@ const User = () => {
           </div>
         </div>
       ) : (
-        <div className="user-button" onClick={() => setOpenModal(true)}>
+        <div className="user-button" onClick={() => setIsOpen(true)}>
           <FaUserCircle size={24} />
           <span>Login/ Register</span>
         </div>
       )}
-      <Modal closeModal={closeModal} openModal={openModal} />
+      <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );
 };

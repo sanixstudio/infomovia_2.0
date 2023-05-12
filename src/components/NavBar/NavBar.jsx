@@ -21,7 +21,7 @@ const index = () => {
         <span className="genre">Genre</span>
         <ul className="genre-list">
           {genreList.map((genre) => (
-            <li>
+            <li key={genre}>
               <a href="#">{genre}</a>
             </li>
           ))}

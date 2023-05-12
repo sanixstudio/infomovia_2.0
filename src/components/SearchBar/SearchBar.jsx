@@ -1,6 +1,5 @@
-import React, { createRef } from "react";
+import React from "react";
 import { SEARCH_URL } from "../../utils/constants";
-// import { useGetMovies } from "../../hooks/useFetch";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { AiOutlineSearch } from "react-icons/ai";
