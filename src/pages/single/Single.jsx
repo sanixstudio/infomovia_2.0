@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import classNames from "classnames";
 import { Footer, Header } from "../../containers";
 import { ScrollToTop } from "../../components";
@@ -15,12 +15,10 @@ import {
 } from "react-icons/bs";
 import { AiOutlineCheck } from "react-icons/ai";
 import { GiProgression } from "react-icons/gi";
-import { UserContext } from "../../context/userContext";
 import { supabase } from "../../utils/supabaseClient";
 import "./single.style.css";
 
 const Single = () => {
-  const { wishList, addToWishList } = useContext(UserContext);
   const { id } = useParams();
   const URL = `${BASE_URL}/movie/${id}?language=en-US&api_key=${
     import.meta.env.VITE_API_KEY
@@ -29,7 +27,6 @@ const Single = () => {
   const addWishItem = async (item) => {
     try {
       const res = await supabase.from("wishlist").insert({ data: item });
-      console.log(res.error.message);
     } catch (error) {
       console.log(error);
     }
@@ -119,19 +116,15 @@ const Single = () => {
               </p>
               <button
                 onClick={() => addWishItem(data)}
-                disabled={existsInWishList(data.id)}
+                // disabled={existsInWishList(data.id)}
               >
-                {existsInWishList(data.id) ? (
-                  <>
-                    <AiOutlineCheck color="white" size={24} />
-                    Already in List
-                  </>
-                ) : (
-                  <>
-                    <BsFillPlusCircleFill color="white" size={24} />
-                    Add to WishList
-                  </>
-                )}
+                {/* TODO:  check if already exists in database, if so then disabled the button and how check icon*/}
+                <>
+                  {/* <AiOutlineCheck color="white" size={24} />
+                    Already in List */}
+                  <BsFillPlusCircleFill color="white" size={24} />
+                  Add to WishList
+                </>
               </button>
             </div>
           </div>

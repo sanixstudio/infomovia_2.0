@@ -10,6 +10,7 @@ import {
   TopRated,
   Footer,
 } from "../../containers";
+import '../../App.css'
 
 const Home = () => {
   const tabs = [

@@ -25,6 +25,8 @@ html {
 body {
   background-color: #111111;
   scroll-behavior: smooth;
+  color: #eaeaea;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .App {
