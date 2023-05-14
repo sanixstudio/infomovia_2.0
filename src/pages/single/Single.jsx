@@ -16,6 +16,7 @@ import {
 import { AiOutlineCheck } from "react-icons/ai";
 import { GiProgression } from "react-icons/gi";
 import { UserContext } from "../../context/userContext";
+import { supabase } from "../../utils/supabaseClient";
 import "./single.style.css";
 
 const Single = () => {
@@ -24,6 +25,15 @@ const Single = () => {
   const URL = `${BASE_URL}/movie/${id}?language=en-US&api_key=${
     import.meta.env.VITE_API_KEY
   }`;
+
+  const addWishItem = async (item) => {
+    try {
+      const res = await supabase.from("wishlist").insert({ data: item });
+      console.log(res.error.message);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const fetchMovieDetails = async () => {
     const res = await fetch(URL);
@@ -34,8 +44,6 @@ const Single = () => {
   const { data, status } = useQuery(["getMovieDetails"], fetchMovieDetails);
 
   if (status !== "success") return <ThreeDots />;
-
-  console.log(wishList);
 
   const existsInWishList = (id) => {
     return wishList.find((el) => el.id === id);
@@ -110,7 +118,7 @@ const Single = () => {
                 {data.overview}
               </p>
               <button
-                onClick={() => addToWishList(data)}
+                onClick={() => addWishItem(data)}
                 disabled={existsInWishList(data.id)}
               >
                 {existsInWishList(data.id) ? (

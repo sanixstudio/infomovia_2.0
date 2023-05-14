@@ -1,19 +1,21 @@
-import React, { useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { GENRES } from "../../utils/constants";
-import { UserContext } from "../../context/userContext";
-import { BsBasket3 } from "react-icons/bs";
 import "./navBar.styles.css";
+import { supabase } from "../../utils/supabaseClient";
 
 const genreList = Object.keys(GENRES.movies);
 
-console.log(genreList);
+const NavBar = () => {
+  const [wishlist, setWishlist] = useState([]);
 
-const index = () => {
-  const { wishList, addToWishList } = useContext(UserContext);
-  // const [selectedGenre, setSelectedGenre] = [""];
+  useEffect(() => {
+    getPosts();
+  }, []);
 
-  //TODO: make page for genre
-  // Setup the Context for Add to favorites
+  async function getPosts() {
+    const { data } = await supabase.from("wishlist").select('*');
+    setWishlist(data);
+  }
 
   return (
     <div className="nav-bar">
@@ -30,10 +32,10 @@ const index = () => {
       </div>
       <a href="/wish-list">
         <span>WishList </span>
-        <span className="wish-items">{wishList.length}</span>
+        <span className="wish-items">{wishlist.length || 0}</span>
       </a>
     </div>
   );
 };
 
-export default index;
+export default NavBar;
